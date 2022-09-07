@@ -7,6 +7,11 @@
 body {
   display: flex;
   min-height: 100vh;
+  position: relative;
+}
+
+main {
+  width: 100%;
 }
 
 .attribution {
