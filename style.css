@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;700&display=swap");
 
+:root {
+  --contact-clr: hsl(223, 87%, 63%);
+  --thin_copyright-clr: hsl(0, 0%, 59%);
+  --input-brdr-clr: hsl(223, 100%, 88%);
+  --input-brdr-clr-invalid: hsl(354, 100%, 66%);
+  --txt-clr: hsl(209, 33%, 12%);
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 
 body {
@@ -17,6 +25,7 @@ body {
 
 .thin {
   font-weight: 200;
+  color: var(--thin_copyright-clr);
 }
 
 .wrapper {
@@ -64,6 +73,7 @@ header {
 
 .header-description {
   margin-bottom: 2rem;
+  color: var(--txt-clr);
 }
 
 .input-form {
@@ -81,6 +91,7 @@ header {
 .input-field {
   padding-inline: 2rem;
   width: 100%;
+  border: 1px solid var(--thin_copyright-clr);
 }
 
 button {
@@ -119,6 +130,41 @@ footer {
 footer > * {
   max-width: 800px;
   margin-block: 1rem;
+}
+
+.contact-ctn {
+  display: flex;
+  margin-block: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: flex;
+  height: 3rem;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: -2px 2px 2px #0002,
+              -1px 1px 2px #fff,
+              inset 0 0 2px #0004;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+  margin: auto;
+}
+
+.contact-link:hover {
+  transform: scale(1.1);
+}
+
+i {
+  font-size: 1.5rem;
+  color: var(--contact-clr);
+}
+
+.copyright {
+  color: var(--thin_copyright-clr);
 }
 
 .attribution {
