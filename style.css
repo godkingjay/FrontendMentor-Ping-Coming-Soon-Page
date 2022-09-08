@@ -13,7 +13,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 
 body {
@@ -96,6 +96,10 @@ header {
   border: 1px solid var(--thin_copyright-clr);
 }
 
+.input-field-invalid {
+  border-color: var(--input-brdr-clr-invalid);
+}
+
 .email-validation-message {
   position: absolute;
   display: flex;
@@ -122,10 +126,11 @@ button {
   color: white;
   border: none;
   box-shadow: 0 4px 8px #0004;
+  cursor: pointer;
 }
 
 button:disabled {
-  filter: grayscale(1);
+  cursor: not-allowed;
 }
 
 .illustration-ctn {
