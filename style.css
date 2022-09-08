@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: 1px solid black;
 }
 
 body {
@@ -18,22 +19,32 @@ body {
   font-weight: 200;
 }
 
-main {
-  width: 100%;
-}
-
 .wrapper {
   height: 100%;
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 100%;
+  max-width: 800px;
   align-items: center;
+  margin-inline: 2rem;
+}
+
+header,
+.input-form,
+.illustration-ctn {
+  position: relative;
+  max-width: 800px;
+}
+
+header,
+.input-form {
+  width: 90%;
 }
 
 header {
@@ -42,6 +53,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .header-title {
@@ -54,12 +66,72 @@ header {
   margin-bottom: 2rem;
 }
 
+.input-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-form > * {
+  display: flex;
+  font-size: 1rem;
+  padding-block: 1rem;
+  border-radius: 2rem;
+}
+
+.input-field {
+  padding-inline: 2rem;
+  width: 100%;
+}
+
+button {
+  padding-inline: 3rem;
+  min-width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.illustration-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 6rem;
+}
+
+.illustration-ctn > img {
+  width: 100%;
+}
+
+.copyright {
+  margin-top: auto;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer > * {
+  max-width: 800px;
+  margin-block: 1rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-top: auto;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 672px) {
+  .input-form {
+    flex-direction: column;
+  }
 }
