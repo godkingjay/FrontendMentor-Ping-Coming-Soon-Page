@@ -115,7 +115,9 @@ header {
   padding: 0;
   border-radius: 0;
   opacity: 0;
-  transition: all 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out,
+              opacity 0.2s ease-in-out,
+              margin 0.2s ease-in-out;
   font-style: italic;
   color: var(--input-invalid-input);
 }
@@ -148,6 +150,7 @@ button:hover:enabled {
 }
 
 button:disabled {
+  background: var(--button-clr);
   cursor: not-allowed;
 }
 

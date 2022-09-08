@@ -17,6 +17,7 @@ emailFeild.addEventListener('input', () => {
       submitBtn.disabled = true;
     }
   } else {
+    emailFeild.classList.remove('input-feild-valid');
     emailFeild.classList.remove('input-field-invalid');
     emailMessage.classList.remove("email-validation-message-show");
   }
