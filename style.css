@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;700&display=swap");
 
 :root {
+  --button-clr: hsl(223, 87%, 63%);
   --contact-clr: hsl(223, 87%, 63%);
   --thin_copyright-clr: hsl(0, 0%, 59%);
   --input-brdr-clr: hsl(223, 100%, 88%);
@@ -12,7 +13,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* outline: 1px solid black; */
+  outline: 1px solid black;
 }
 
 body {
@@ -79,6 +80,7 @@ header {
 .input-form {
   display: flex;
   gap: 1rem;
+  position: relative;
 }
 
 .input-form > * {
@@ -94,6 +96,21 @@ header {
   border: 1px solid var(--thin_copyright-clr);
 }
 
+.email-validation-message {
+  position: absolute;
+  display: flex;
+  bottom: -2rem;
+  left: 2rem;
+  padding: 0;
+  border-radius: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.email-validation-message-show {
+  opacity: 1;
+}
+
 button {
   padding-inline: 3rem;
   min-width: max-content;
@@ -101,6 +118,14 @@ button {
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  background: var(--button-clr);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px #0004;
+}
+
+button:disabled {
+  filter: grayscale(1);
 }
 
 .illustration-ctn {
@@ -179,5 +204,20 @@ i {
 @media (max-width: 672px) {
   .input-form {
     flex-direction: column;
+  }
+
+  .email-validation-message {
+    position: relative;
+    height: 0;
+    bottom: 0;
+    left: 50%;
+    width: max-content;
+    transform: translateX(-50%);
+  }
+  
+  .email-validation-message-show {
+    height: 100%;
+    margin-bottom: 1rem;
+    opacity: 1;
   }
 }
