@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: ---> [LINK]()
-- Live Site URL: ---> [LINK]()
+- Live Site URL: ---> [LINK](https://godkingjay.github.io/FrontendMentor-Ping-Coming-Soon-Page/)
 
 ## My process
 
